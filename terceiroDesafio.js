@@ -4,19 +4,24 @@ class hero{
         this.idade = idade
         this.tipo = tipo
     }
+
     atacar(){
-        let ataque = ""
+        let ataque
         if (this.tipo === "Mago"){
-            ataque = "Usou Magia"
+            ataque = "Magia"
         } else if  (this.tipo === "Guerreiro"){
-            ataque = "Usou Espada"
+            ataque = "Espada"
         } else if  (this.tipo === "Monge"){
-            ataque = "Usou Artes Marciais"
+            ataque = "Artes Marciais"
         } else if  (this.tipo === "Ninja"){
-            ataque = "Usou Shuriken"
+            ataque = "Shuriken"
         }
-    console.log(`o ${tipo} atacou usando ${ataque}`)
+
+    console.log(`O ${this.tipo} atacou usando ${ataque}`)
     }
 }
-//let ataque = atacar()
-let heroi = new hero("Felipe", 39, "Guerreiro")
+const heroi1 = new hero("Felipe", 39, "Guerreiro")
+const heroi2 = new hero("Zeus", 56, "Mago")
+
+heroi1.atacar()
+heroi2.atacar()
